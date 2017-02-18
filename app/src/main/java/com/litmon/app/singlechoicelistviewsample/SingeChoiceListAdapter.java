@@ -15,6 +15,8 @@ public class SingeChoiceListAdapter extends ArrayAdapter<String> {
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        return new ListItemSingleChoiceView(getContext());
+        ListItemSingleChoiceView view = new ListItemSingleChoiceView(getContext());
+        view.checkedTextView.setText(getItem(position));
+        return view;
     }
 }
